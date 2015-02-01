@@ -5,13 +5,13 @@ Hoje em dia existem determinados bots a operar diretamente via navegador de Inte
 
 Se é um jogador que pretende um bot com a seguinte especificação:
 
-    A operar via bash num servidor remoto, numa Virtual Machine (VM) com a funcionalidade de farming e retirar tropas da aldeia em caso de invasão.
+    A operar via bash num servidor remoto, por exemplo, em uma Virtual Machine (VM).
     
 então este é um programa de computador ideal para controlar o seu jogo.
 
-É um bot bastante primata, com apenas duas funcionalidades (i) farming e (ii) retirar tropas da aldeia. Não obstante, apenas foi desenhado para a tribo gaulesa, no entanto, visto ter sido produzido na linguagem de programação Ruby torna-se fácil ser otimizado, alterado e melhorado.
+É um bot bastante primata, com funcionalidades como farming, retirar tropas da aldeia em caso ataque, enviar héroi para aventuras, etc. Não obstante, apenas foi desenhado para a **tribo gaulesa**, no entanto, visto ter sido produzido na linguagem de *scripting* como o Ruby torna-se bastante acessível melhorá-lo.
 
-O autor desta peça de software desenhou  o bot consoante as suas necessidades. Para correr basta possuir uma máquina com o Ruby instalado (por exemplo Linux).
+O autor desta peça de software desenhou  o *bot* consoante as suas necessidades. Para correr basta deter uma máquina com o Ruby instalado (por exemplo, uma maquina com o sistema operativo Linux).
 
 Antes da primeira execução devem ser efetuadas algumas configurações.
 
@@ -35,9 +35,9 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 
 **farm_save_trops** – Nome da aldeia para onde deseja enviar as tropas em caso de ataque.
 
-**limit_trop_to_farm** – Limite de tropas por farm ( nesta configuração foram definidas 7 tropas em cada ataque).
+**limit_trop_to_farm** – Limite de tropas por *farm* ( nesta configuração foram definidas 7 tropas em cada ataque).
 
-Os restantes deverão ser alterados conforme o servidor, por exemplo, alterar ts5 para ts4.
+Os restantes deverão ser alterados conforme o servidor, por exemplo, alterar **ts5** para **ts4**.
 
 #Ficheiro [farmlist.yml]
 ```python
@@ -45,7 +45,7 @@ Os restantes deverão ser alterados conforme o servidor, por exemplo, alterar ts
 :farm2:   'Aldeia do gali'
 ```
 
-Neste ficheiro poderá adicionar todos os seus farms, mantendo a estrutura definida.
+Neste ficheiro poderá adicionar todos os seus *farms*, mantendo a estrutura definida.
 
 Inicalmente deve efetuar o comando:
 
@@ -57,34 +57,36 @@ Em seguida, para executar deve introduzir o seguinte comando no seu terminal:
 
     ruby bot.rb &
 
-, este irá operar em background e gerar um histórico de operações para o ficheiro log.log.
+, este irá operar em *background* e gerar um histórico de operações para o ficheiro **log.log**.
 
-Para consultar o log pode usar o seguinte comando via terminal:
+Para consultar o *log* pode usar o seguinte comando via terminal:
 
     cat log.log
 
 Exemplo do log:
 ```python
-D, [2015-01-31T16:39:36.691985 #18158] DEBUG — : Try start the bot at [2015-01-31 16:39:36].
-D, [2015-01-31T16:39:36.692150 #18158] DEBUG — : Loading configurations.
+D, [2015-01-31T16:39:36.691985 #18158] DEBUG — :  Try start the bot at [2015-01-31 16:39:36].
+D, [2015-01-31T16:39:36.692150 #18158] DEBUG — :  Loading configurations.
 D, [2015-01-31T16:39:36.693616 #18158] DEBUG — :  Configs and farmlist loaded.
 D, [2015-01-31T16:39:36.693727 #18158] DEBUG — :  Try to login.
 D, [2015-01-31T16:39:51.503283 #18158] DEBUG — :  Login sucessful.
 D, [2015-01-31T16:39:51.503553 #18158] DEBUG — :  Executing loop.
 D, [2015-01-31T16:40:05.276853 #18158] DEBUG — :  Send troops (7 falanges) to farm Aldeia do NoobAMS.
 D, [2015-01-31T16:40:19.504539 #18158] DEBUG — :  Send troops (7 falanges) to farm Aldeia do gali.
-D, [2015-01-31T16:55:35.535188 #18158] DEBUG — : Send troops (7 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T16:55:35.535188 #18158] DEBUG — :  Send troops (7 falanges) to farm Aldeia do NoobAMS.
 D, [2015-01-31T16:55:49.915096 #18158] DEBUG — :  Send troops (7 falanges) to farm Aldeia do gali.
+(...)
 ```
 
 #Histórico de updates e funcionalidades
 
-Versão: 1.0
+Versão: 1.1
 
 Funcionalidades:
 
-    Farming,
-    Tribos disponíveis: Gauleses,
-    Log de operações.
+    -Farming,
+    -Enviar héroi para aventuras,
+    -Tribos disponíveis: Gauleses,
+    -Log de operações.
 
  
