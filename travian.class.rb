@@ -61,11 +61,11 @@ class Travian
 
     case @configs[:tribe]
       when 'gauleses'
-        @vec_of_troop = {:v1 => 'Falanges', :v2 => 'Espadachins', :v3 => 'Batedores', :v4 => 'Trovões Theutat', :v5 => 'Cavaleiros Druidas', :v6 => 'Haeduanos'}
+        @vec_of_troop = {:v1 => 'Falanges', :v2 => 'Espadachins', :v3 => 'Batedores', :v4 => 'Trovões Theutates', :v5 => 'Cavaleiros Druidas', :v6 => 'Haeduanos'}
       when 'romanos'
         @vec_of_troop = {:v1 => 'Legionários', :v2 => 'Pretorianos', :v3 => 'Imperianos', :v4 => 'Equites Legati', :v5 => 'Equites Imperatoris', :v6 => 'Equites Caesaris'}
       when 'salteadores'
-        @vec_of_troop = {:v1 => 'Salteadores', :v2 => 'Lanceiros', :v3 => 'Bárbaros', :v4 => 'Espiões', :v5 => 'Paladinos', :v6 => 'Cavaleiros Teutão'}
+        @vec_of_troop = {:v1 => 'Salteadores', :v2 => 'Lanceiros', :v3 => 'Bárbaros', :v4 => 'Espiões', :v5 => 'Paladinos', :v6 => 'Cavaleiros Teutões'}
     end
 
     troops      = { :t1 => 0, :t2 => 0, :t3 => 0, :t4 => 0, :t5 => 0, :t6 => 0, :heroi => 0}
