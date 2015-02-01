@@ -1,5 +1,5 @@
 #bot configurations
-:execute_in_background:   false
+:execute_in_background:   true
 :user:                    'user'
 :pwd:                     'pwd'
 :url_base:                'http://ts5.travian.pt'
