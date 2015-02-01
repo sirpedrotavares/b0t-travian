@@ -17,23 +17,23 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 
 #Ficheiro [configurations.yml]
 
-:execute_in_background:   true
+>:execute_in_background:   true
 
-:user:                    'seu_username'
+>:user:                    'seu_username'
 
-:pwd:                     'sua_password'
+>:pwd:                     'sua_password'
 
-:url_base:                'http://ts5.travian.pt'
+>:url_base:                'http://ts5.travian.pt'
 
-:home:                    'http://ts5.travian.pt/dorf1.php'
+>:home:                    'http://ts5.travian.pt/dorf1.php'
 
-:logout:                  'http://ts5.travian.pt/logout.php'
+>:logout:                  'http://ts5.travian.pt/logout.php'
 
-:farm_save_trops:         'farm_name'
+>:farm_save_trops:         'farm_name'
 
-:url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
+>:url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 
-:limit_trop_to_farm:      '7'
+>:limit_trop_to_farm:      '7'
 
 user – O seu utilizador de jogo.
 
