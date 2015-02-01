@@ -17,7 +17,7 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 
 #Ficheiro [configurations.yml]
 
->:execute_in_background:   true *separate paragraph*
+>:execute_in_background:   true ...
 >:user:                    'seu_username'
 
 >:pwd:                     'sua_password'
