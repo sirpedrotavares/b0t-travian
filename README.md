@@ -17,7 +17,8 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 
 #Ficheiro [configurations.yml]
 
->:execute_in_background:   true ...
+```python
+>:execute_in_background:   true 
 >:user:                    'seu_username'
 
 >:pwd:                     'sua_password'
@@ -33,7 +34,7 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 >:url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 
 >:limit_trop_to_farm:      '7'
-
+```
 user – O seu utilizador de jogo.
 
 pwd – A sua palavra-passe de jogo.
