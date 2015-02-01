@@ -1,5 +1,6 @@
 #bot configurations
-:execute_in_background:   true
+:execute_in_background:   false
+:tribe:                   'gauleses' # options[gauleses,romanos,salteadores]
 :user:                    'username'
 :pwd:                     'password'
 :url_base:                'http://ts5.travian.pt'
@@ -9,3 +10,4 @@
 :url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 :limit_trop_to_farm:      '7'
 :url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'
+:hero_adventure_active:   false

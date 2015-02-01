@@ -7,6 +7,8 @@ obj.log('debug', "Executing loop.")
 
 while 1
 
+  begin
+
   obj.hero_adventures
   sleep(2)
 
@@ -16,10 +18,15 @@ while 1
     sleep(2)
   end
 
+  obj.back_to_home
   suspend=[*900..1600].sample
   obj.log('debug', "Suspend b0t for #{suspend} seconds.")
   sleep(suspend)
 
+  rescue Exception => e
+    obj.log('fatal', e.message)
+    obj.logout
+  end
 end
 
 

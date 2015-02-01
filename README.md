@@ -9,7 +9,7 @@ Se é um jogador que pretende um bot com a seguinte especificação:
     
 então este é um programa de computador ideal para controlar o seu jogo.
 
-É um bot bastante primata, com funcionalidades como farming, retirar tropas da aldeia em caso ataque, enviar héroi para aventuras, etc. Não obstante, apenas foi desenhado para a **tribo gaulesa**, no entanto, visto ter sido produzido na linguagem de *scripting* como o Ruby torna-se bastante acessível melhorá-lo.
+É um bot bastante primata, com funcionalidades como farming, retirar tropas da aldeia em caso ataque, enviar héroi para aventuras, etc.
 
 O autor desta peça de software desenhou  o *bot* consoante as suas necessidades. Para correr basta deter uma máquina com o Ruby instalado (por exemplo, uma maquina com o sistema operativo Linux).
 
@@ -18,17 +18,22 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 #Ficheiro [configurations.yml]
 
 ```python
-:execute_in_background:   true 
-:user:                    'seu_username'
-:pwd:                     'sua_password'
+#bot configurations
+:execute_in_background:   false
+:tribe:                   'gauleses' # options[gauleses,romanos,salteadores]
+:user:                    'shacktar'
+:pwd:                     'qwerty'
 :url_base:                'http://ts5.travian.pt'
 :home:                    'http://ts5.travian.pt/dorf1.php'
 :logout:                  'http://ts5.travian.pt/logout.php'
-:farm_save_trops:         'farm_name'
+:farm_save_trops:         'farm_save'
 :url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 :limit_trop_to_farm:      '7'
 :url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'
+:hero_adventure_active:   false
 ```
+**tribe** – A sua tribo, gauleses, romanos ou salteadores.
+
 **user** – O seu utilizador de jogo.
 
 **pwd** – A sua palavra-passe de jogo.
@@ -80,13 +85,13 @@ D, [2015-01-31T16:55:49.915096 #18158] DEBUG — :  Send troops (7 falanges) to 
 
 #Histórico de updates e funcionalidades
 
-**Versão: 1.1**
+**Versão: 1.2**
 
 Funcionalidades:
 
     -Farming,
     -Enviar héroi para aventuras,
-    -Tribos disponíveis: Gauleses,
+    -Tribos disponíveis: Gauleses, Romanos e Salteadores,
     -Log de operações.
 
  
