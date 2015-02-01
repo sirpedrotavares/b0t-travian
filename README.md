@@ -80,7 +80,7 @@ D, [2015-01-31T16:55:49.915096 #18158] DEBUG — :  Send troops (7 falanges) to 
 
 #Histórico de updates e funcionalidades
 
-Versão: 1.1
+**Versão: 1.1**
 
 Funcionalidades:
 
