@@ -19,7 +19,7 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 
 ```python
 #bot configurations
-:execute_in_background:   false
+:execute_in_background:   true
 :tribe:                   'gauleses' # options[gauleses,romanos,salteadores]
 :user:                    'shacktar'
 :pwd:                     'qwerty'
