@@ -27,6 +27,7 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 :farm_save_trops:         'farm_name'
 :url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 :limit_trop_to_farm:      '7'
+:url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'
 ```
 **user** – O seu utilizador de jogo.
 
