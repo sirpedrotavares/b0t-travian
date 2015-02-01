@@ -1,0 +1,32 @@
+D, [2015-01-31T16:39:36.691985 #18158] DEBUG -- : Try start the bot at [2015-01-31 16:39:36].
+D, [2015-01-31T16:39:36.692150 #18158] DEBUG -- : Loading configurations.
+D, [2015-01-31T16:39:36.693616 #18158] DEBUG -- : 2015-01-31 16:39:36 configs and farmlist loaded.
+D, [2015-01-31T16:39:36.693727 #18158] DEBUG -- : 2015-01-31 16:39:36 try to login.
+D, [2015-01-31T16:39:51.503283 #18158] DEBUG -- : 2015-01-31 16:39:51 login sucessful.
+D, [2015-01-31T16:39:51.503553 #18158] DEBUG -- : 2015-01-31 16:39:51 Executing loop.
+D, [2015-01-31T16:40:05.276853 #18158] DEBUG -- : 2015-01-31 16:40:05 Send troops (15 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T16:40:19.504539 #18158] DEBUG -- : 2015-01-31 16:40:19 Send troops (15 falanges) to farm Aldeia do gali.
+D, [2015-01-31T16:55:35.535188 #18158] DEBUG -- : 2015-01-31 16:55:35 Send troops (15 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T16:55:49.915096 #18158] DEBUG -- : 2015-01-31 16:55:49 Send troops (15 falanges) to farm Aldeia do gali.
+D, [2015-01-31T17:11:06.227611 #18158] DEBUG -- : 2015-01-31 17:11:06 Send troops (15 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T17:11:20.485992 #18158] DEBUG -- : 2015-01-31 17:11:20 Send troops (15 falanges) to farm Aldeia do gali.
+D, [2015-01-31T17:26:36.662529 #18158] DEBUG -- : 2015-01-31 17:26:36 Send troops (15 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T17:26:51.003400 #18158] DEBUG -- : 2015-01-31 17:26:51 Send troops (15 falanges) to farm Aldeia do gali.
+D, [2015-01-31T17:42:07.231070 #18158] DEBUG -- : 2015-01-31 17:42:07 Send troops (15 falanges) to farm Aldeia do NoobAMS.
+D, [2015-01-31T17:42:21.538071 #18158] DEBUG -- : 2015-01-31 17:42:21 Send troops (15 falanges) to farm Aldeia do gali.
+D, [2015-02-01T13:04:09.797782 #4006] DEBUG -- : Try start the bot at [2015-02-01 13:04:09].
+D, [2015-02-01T13:04:09.797995 #4006] DEBUG -- : Loading configurations.
+D, [2015-02-01T13:04:09.801916 #4006] DEBUG -- : 2015-02-01 13:04:09 configs and farmlist loaded.
+D, [2015-02-01T13:04:09.802121 #4006] DEBUG -- : 2015-02-01 13:04:09 try to login.
+D, [2015-02-01T13:04:22.907945 #4006] DEBUG -- : 2015-02-01 13:04:22 login sucessful.
+D, [2015-02-01T13:04:22.908223 #4006] DEBUG -- : 2015-02-01 13:04:22 Executing loop.
+D, [2015-02-01T13:04:36.409556 #4006] DEBUG -- : 2015-02-01 13:04:36 Send troops (7 espadachins) to farm Aldeia do NoobAMS.
+D, [2015-02-01T13:04:50.102719 #4006] DEBUG -- : 2015-02-01 13:04:50 Send troops (7 espadachins) to farm Aldeia do gali.
+D, [2015-02-01T13:06:03.775715 #4167] DEBUG -- : Try start the bot at [2015-02-01 13:06:03].
+D, [2015-02-01T13:06:03.775863 #4167] DEBUG -- : Loading configurations.
+D, [2015-02-01T13:06:03.777339 #4167] DEBUG -- : 2015-02-01 13:06:03 configs and farmlist loaded.
+D, [2015-02-01T13:06:03.777454 #4167] DEBUG -- : 2015-02-01 13:06:03 try to login.
+D, [2015-02-01T13:06:17.712409 #4167] DEBUG -- : 2015-02-01 13:06:17 login sucessful.
+D, [2015-02-01T13:06:17.712607 #4167] DEBUG -- : 2015-02-01 13:06:17 Executing loop.
+D, [2015-02-01T13:06:31.466903 #4167] DEBUG -- : 2015-02-01 13:06:31 Send troops (7 espadachins) to farm Aldeia do NoobAMS.
+D, [2015-02-01T13:06:46.097083 #4167] DEBUG -- : 2015-02-01 13:06:46 Send troops (7 espadachins) to farm Natares 45|-69.
