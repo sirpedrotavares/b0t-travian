@@ -21,8 +21,8 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 #bot configurations
 :execute_in_background:   true
 :tribe:                   'gauleses' # options[gauleses,romanos,salteadores]
-:user:                    'shacktar'
-:pwd:                     'qwerty'
+:user:                    'username'
+:pwd:                     'password'
 :url_base:                'http://ts5.travian.pt'
 :home:                    'http://ts5.travian.pt/dorf1.php'
 :logout:                  'http://ts5.travian.pt/logout.php'
