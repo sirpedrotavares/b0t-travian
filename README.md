@@ -1,7 +1,7 @@
 # b0t-travian
 B0t-Travian in Ruby on bash terminal
 
-![](https://github.com/github/training-kit/blob/master/images/professortocat.png)
+![](https://clubetravian.files.wordpress.com/2011/08/cropped-travian4_banner1.jpg)
 
 Hoje em dia existem determinados bots a operar diretamente via navegador de Internet, especialmente plugins para o Mozilla Firefox, que gerem de forma automatizada a sua conta do jogo de navegador travian (http://www.travian.pt).
 
