@@ -13,9 +13,11 @@ while 1
   sleep(2)
 
   troops=obj.get_military
-  obj.farmlist.each do |farm, name|
-    obj.farming(name,troops)
-    sleep(2)
+  if obj.configs[:farming]
+    obj.farmlist.each do |farm, name|
+      obj.farming(name,troops)
+      sleep(2)
+    end
   end
 
   obj.back_to_home

@@ -48,6 +48,7 @@ Os restantes deverão ser alterados conforme o servidor, por exemplo, alterar **
 ```python
 :farm1:   'Aldeia do NoobAMS'
 :farm2:   'Aldeia do gali'
+:farm3:   '...'
 ```
 
 Neste ficheiro poderá adicionar todos os seus *farms*, mantendo a estrutura definida.
@@ -85,7 +86,7 @@ D, [2015-01-31T16:55:49.915096 #18158] DEBUG — :  Send troops (7 falanges) to 
 
 #Histórico de updates e funcionalidades
 
-**Versão: 1.2**
+**Versão: 1.3**
 
 Funcionalidades:
 
