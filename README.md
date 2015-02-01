@@ -95,3 +95,4 @@ Funcionalidades:
     -Log de operações.
 
  
+[**Visita: http://seguranca-informatica.pt**]
