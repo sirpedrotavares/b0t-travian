@@ -1,10 +1,11 @@
 #bot configurations
 :execute_in_background:   true
-:user:                    'user'
-:pwd:                     'pwd'
+:user:                    'username'
+:pwd:                     'password'
 :url_base:                'http://ts5.travian.pt'
 :home:                    'http://ts5.travian.pt/dorf1.php'
 :logout:                  'http://ts5.travian.pt/logout.php'
 :farm_save_trops:         'farm_save'
 :url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 :limit_trop_to_farm:      '7'
+:url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'

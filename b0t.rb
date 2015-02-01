@@ -4,7 +4,11 @@ load "travian.class.rb"
 
 obj=Travian.new
 obj.log('debug', "Executing loop.")
+
 while 1
+
+  obj.hero_adventures
+  sleep(2)
 
   troops=obj.get_military
   obj.farmlist.each do |farm, name|
