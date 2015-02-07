@@ -138,6 +138,8 @@ Em seguida, aceder no navegador de Internet ao endereço: **127.0.0.1:9494**.
 
 ![](http://blog.seguranca-informatica.pt/wp-content/uploads/2015/01/1.png)
 
+![](http://blog.seguranca-informatica.pt/wp-content/uploads/2015/01/2.png)
+
 #Histórico de updates e funcionalidades
 
 **Versão: 2.0**
