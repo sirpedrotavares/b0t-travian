@@ -1,0 +1,36 @@
+#bot configurations
+
+#Configure your account
+#------User Authentication-----------------------------------------------------#
+:user:                    'username'
+:pwd:                     'password'
+:tribe:                   'gauleses' # options[gauleses,romanos,salteadores]
+#------------------------------------------------------------------------------#
+
+#-------Game Configurations URLs-----------------------------------------------#
+:execute_in_background:   true
+:url_base:                'http://ts5.travian.pt'
+:home:                    'http://ts5.travian.pt/dorf1.php'
+:logout:                  'http://ts5.travian.pt/logout.php'
+:url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
+:url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'
+:off: '-1'
+:build_url:               'http://ts5.travian.pt/build.php?id='
+#-----------------------------------------------------------------------------#
+
+#-------In case of invasion send my troops for -------------------------------#
+:farm_save_troops:         'farm_save'
+#-----------------------------------------------------------------------------#
+
+
+#---------Game Definitions----------------------------------------------------#
+:hero_adventure_active:   false
+:farming:                 true
+:save_troops:             false
+:limit_trop_to_farm:      '7' #number of troops by attack
+:clay_field:              true
+:cereal_field:            true
+:iron_field:              true
+:wood_field:              true
+#-----------------------------------------------------------------------------#
+

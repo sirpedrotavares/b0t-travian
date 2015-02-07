@@ -15,9 +15,18 @@ então este é um programa de computador ideal para controlar o seu jogo.
 
 O autor desta peça de software desenhou  o *bot* consoante as suas necessidades. Para correr basta deter uma máquina com o Ruby instalado (por exemplo, uma maquina com o sistema operativo Linux).
 
-Antes da primeira execução devem ser efetuadas algumas configurações.
+Este *bot* pode ser executado em duas modalidades:
 
-#Ficheiro [configurations.yml]
+(i):  Em modo terminal;
+(ii): Através de uma página *web* de configuração;
+
+#Modalidade 1: (i) - Em modo terminal
+
+Antes da primeira execução devem ser efetuadas algumas configurações.
+1. Renomear o ficheiro **config.yml** para **config.old.yml**.
+2. Em seguida, renomear o ficheiro **config.sample.yml** para **config.yml**.
+
+#Ficheiro [config.sample.yml]
 
 ```python
 #bot configurations
@@ -36,17 +45,24 @@ Antes da primeira execução devem ser efetuadas algumas configurações.
 :logout:                  'http://ts5.travian.pt/logout.php'
 :url_farming:             'http://ts5.travian.pt/build.php?tt=2&id=39'
 :url_hero_adventure:      'http://ts5.travian.pt/hero_adventure.php'
+:off: '-1'
+:build_url:               'http://ts5.travian.pt/build.php?id='
 #-----------------------------------------------------------------------------#
 
 #-------In case of invasion send my troops for -------------------------------#
-:farm_save_trops:         'farm_save'
+:farm_save_troops:         'farm_save'
 #-----------------------------------------------------------------------------#
 
 
 #---------Game Definitions----------------------------------------------------#
 :hero_adventure_active:   false
 :farming:                 true
+:save_troops:             false
 :limit_trop_to_farm:      '7' #number of troops by attack
+:clay_field:              true
+:cereal_field:            true
+:iron_field:              true
+:wood_field:              true
 #-----------------------------------------------------------------------------#
 ```
 **tribe** – A sua tribo, gauleses, romanos ou salteadores.
@@ -101,9 +117,26 @@ D, [2015-01-31T16:55:49.915096 #18158] DEBUG — :  Send troops (7 falanges) to 
 (...)
 ```
 
+Quando pretender parar o *b0t* deve fazê-lo via terminal, executando, por exemplo, o ficheiro **force_kill.sh**.
+```python
+:> chmod 777 force_kill.sh
+:> ./force_kill.sh
+```
+
+#Modalidade 2: (i) - Através de uma página *web* de configuração;
+
+Esta modalidade permite gerir o *b0t* através de um página *web*. Para a sua execução apenas é necessário correr o servidor *web* e instalar, mais uma vez, as gems necessárias.
+```python
+:> bundle install
+:> ruby web-service.rb &
+```
+
+Em seguida, aceder no navegador de Internet ao endereço: **127.0.0.1:9494**.
+
+
 #Histórico de updates e funcionalidades
 
-**Versão: 1.3**
+**Versão: 2.0**
 
 Funcionalidades:
 
