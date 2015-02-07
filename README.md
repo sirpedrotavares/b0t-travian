@@ -140,6 +140,19 @@ Em seguida, aceder no navegador de Internet ao endereço: **127.0.0.1:9494**.
 
 ![](http://blog.seguranca-informatica.pt/wp-content/uploads/2015/01/2.png)
 
+
+Ainda, se pretender instalar este *bot* num servidor remoto, ou até numa rede doméstica deve efetuar os seguintes passos:
+
+1. Ativar *port forwarding* para o IP e porta (9494) da máquina.
+2. Configurar o IP Tables da máquina.
+
+```python
+sudo iptables -I INPUT -p tcp --dport 9494 -j ACCEPT
+sudo iptables -I OUTPUT -p tcp --dport 9494 -j ACCEPT
+```
+
+Por fim, deverá conseguir aceder ao seu *bot* remotamente a partir de qualquer lugar na rede, seja ele na rede intranet ou Internet.
+
 #Histórico de updates e funcionalidades
 
 **Versão: 2.0**
