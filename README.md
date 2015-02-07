@@ -18,12 +18,15 @@ O autor desta peça de software desenhou  o *bot* consoante as suas necessidades
 Este *bot* pode ser executado em duas modalidades:
 
 (i):  Em modo terminal;
+
 (ii): Através de uma página *web* de configuração;
 
 #Modalidade 1: (i) - Em modo terminal
 
 Antes da primeira execução devem ser efetuadas algumas configurações.
+
 1. Renomear o ficheiro **config.yml** para **config.old.yml**.
+
 2. Em seguida, renomear o ficheiro **config.sample.yml** para **config.yml**.
 
 #Ficheiro [config.sample.yml]
