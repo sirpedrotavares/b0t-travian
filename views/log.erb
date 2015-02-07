@@ -1,0 +1,15 @@
+<% @log = File.read('log.log')%>
+<table>
+  <tr><td align="right">
+
+
+    <h2>-- Log History --</h2>
+    <br>
+    <a href="/views/log.erb"><img class="stop" border="0" width="40px" height="40px" src="/images/refresh.png"></a>
+    <textarea style="width:935px;height:200px;"><%= @log %></textarea>
+
+  </td></tr>
+  <tr><td>
+</table>
+
+

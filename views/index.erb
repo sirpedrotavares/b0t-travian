@@ -1,0 +1,383 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="/javascript/ddaccordion.js"></script>
+
+
+<style type="text/css">
+
+  .mypets{ /*header of 1st demo*/
+    cursor: hand;
+    cursor: pointer;
+    padding: 2px 5px;
+    border: 1px solid gray;
+    background: #E1E1E1;
+  }
+
+  .openpet{ /*class added to contents of 1st demo when they are open*/
+    background: steelblue;
+  }
+
+  .technology{ /*header of 2nd demo*/
+    cursor: hand;
+    cursor: pointer;
+    font: bold 14px Verdana;
+    margin: 10px 0;
+  }
+
+
+  .openlanguage{ /*class added to contents of 2nd demo when they are open*/
+    color: green;
+  }
+
+  .closedlanguage{ /*class added to contents of 2nd demo when they are closed*/
+    color: red;
+  }
+
+
+
+  .stop:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+  }
+
+
+
+
+  table.imagetable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+  }
+  table.imagetable th {
+    background:#b5cfd2;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+  }
+  table.imagetable td {
+    background:#dcddc0;
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #999999;
+
+  }
+
+
+
+
+</style>
+
+<script type="text/javascript">
+
+  //Initialize first demo:
+  ddaccordion.init({
+    headerclass: "mypets", //Shared CSS class name of headers group
+    contentclass: "thepet", //Shared CSS class name of contents group
+    revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+    mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+    collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+    defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+    onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+    animatedefault: false, //Should contents open by default be animated into view?
+    scrolltoheader: false, //scroll to header each time after it's been expanded by the user?
+    persiststate: true, //persist state of opened contents within browser session?
+    toggleclass: ["", "openpet"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+    togglehtml: ["none", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+    animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+    oninit:function(expandedindices){ //custom code to run when headers have initalized
+      //do nothing
+    },
+    onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+      //do nothing
+    }
+  })
+
+  //Initialize 2nd demo:
+  ddaccordion.init({
+    headerclass: "technology", //Shared CSS class name of headers group
+    contentclass: "thelanguage", //Shared CSS class name of contents group
+    revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+    mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+    collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+    defaultexpanded: [], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+    onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+    animatedefault: false, //Should contents open by default be animated into view?
+    scrolltoheader: false, //scroll to header each time after it's been expanded by the user?
+    persiststate: false, //persist state of opened contents within browser session?
+    toggleclass: ["closedlanguage", "openlanguage"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+    togglehtml: ["prefix", "<img src='http://i13.tinypic.com/80mxwlz.gif' style='width:13px; height:13px' /> ", "<img src='http://i18.tinypic.com/6tpc4td.gif' style='width:13px; height:13px' /> "], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+    animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+    oninit:function(expandedindices){ //custom code to run when headers have initalized
+      //do nothing
+    },
+    onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+      //do nothing
+    }
+  })
+
+</script>
+
+
+
+<%require 'yaml'%>
+<% @configs=YAML.load_file('config.yml') %>
+<% @farmlist=YAML.load_file('farmlist.yml') %>
+
+
+<html>
+<header><title>Travian b0t</title></header>
+<body>
+
+
+
+<img width="950px" src="/images/banner.jpg">
+<br>
+
+<br>
+<% if @configs[:off]=='-1'%>
+    <form method="post" action="/start"><table border="0" width="950px"><tr><td width="45px"><img width="40px" height="40px" src="/images/light-red-flash.gif"></td><td width="270px"><font size="3"><b>B0t Status</b></font>: [<font size="3" color="red">Not Running</font>]</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input style="width:70px;height:75px;"  class="stop" src="/images/start.png" type="image" value="Stop b0t"></td><td align="right"><a href="/"><img class="stop" border="0" width="40px" height="40px" src="/images/refresh.png"></a></td></tr></table></form>
+
+   <%else%>
+    <form method="post" action="/stop"><table border="0" width="950px"><tr><td width="45px"><img width="40px" height="40px" src="/images/light-yellow-flash.gif"></td><td width="210px"><font size="3"><b>B0t Status</b></font>: [<font size="3" color="green">Running</font>]</td><td>&nbsp;&nbsp;&nbsp;&nbsp;<input style="width:70px;height:70px;"  class="stop" src="/images/stop.gif" type="image" value="Stop b0t"></td><td align="right"><a href="/"><img class="stop" border="0" width="40px" height="40px" src="/images/refresh.png"></a></td></tr></table></form>
+   <%end%>
+
+
+<br>
+
+
+<table border="0" width="950px">
+  <tr><td>
+
+
+<h3 class="mypets">--- B0t Configurations ---</h3>
+<div class="thepet">
+
+  <table border="0" width="950px">
+
+    <tr>
+
+      <td>
+
+
+
+
+
+      <form method="post" action="/save_bot_configurations">
+
+
+        <table class="imagetable" width="50%" border="1">
+
+          <tr>
+            <td width="40%">Server</td><td><input size="30" type="text" name="server" value="<%= @configs[:url_base] %>"></td>
+          </tr>
+
+          <tr>
+            <td width="40%">Home</td><td><input size="30"  type="text" name="home" value="<%= @configs[:home] %>"></td>
+          </tr>
+
+
+          <tr>
+            <td width="40%">Logout</td><td><input size="30"  type="text" name="logout" value="<%= @configs[:logout] %>"></td>
+          </tr>
+
+          <tr>
+            <td width="40%">Farming URL</td><td><input size="30"  type="text" name="farming" value="<%= @configs[:url_farming] %>"></td>
+          </tr>
+
+
+          <tr>
+            <td width="40%">Hero Adventure URL</td><td><input size="30"  type="text" name="hero" value="<%= @configs[:url_hero_adventure] %>"></td>
+          </tr>
+
+
+          <tr>
+            <td width="40%">Build URL</td><td><input size="30"  type="text" name="build" value="<%= @configs[:build_url] %>"></td>
+          </tr>
+
+
+          <tr><td colspan="2"> <input style="width:100%;height:50px;" type="submit" value="Save Changes"></td></tr>
+        </table>
+
+      </form>
+
+
+
+      </td>
+  <td>
+
+
+
+
+  <form method="post" action="/save_account_definitions">
+    <table class="imagetable" width="50%" border="0">
+
+
+
+      <tr>
+        <td>Username</td><td><input size="30"  type="text" name="username" value="<%= @configs[:user] %>"></td>
+      </tr>
+
+
+      <tr>
+        <td>Password</td><td><input size="30"  type="password" name="password" value="<%= @configs[:pwd] %>"></td>
+      </tr>
+
+
+      <tr>
+        <td>Tribe</td><td><input type="text" name="tribe" value="<%= @configs[:tribe] %>"><br>
+        @otpions: <b>gauleses</b>, <b>romanos</b>, <b>salteadores</b></td>
+      </tr>
+
+
+      <tr>
+        <td>Save troops</td><td><input size="7"  type="text" name="save_troops" value="<%= @configs[:save_troops] %>"> Farm: <input size="12"  type="text" name="farm_save_troops" value="<%= @configs[:farm_save_troops] %>"></td>
+      </tr>
+
+
+      <tr>
+        <td>Hero Adventures</td><td><input size="30"  type="text" name="hero_adventures" value="<%= @configs[:hero_adventure_active] %>"></td>
+      </tr>
+
+      <tr>
+        <td>Farming</td><td><input size="30"  type="text" name="farming" value="<%= @configs[:farming] %>"></td>
+      </tr>
+
+      <tr>
+        <td>Limit troops to farm</td><td><input size="30"  type="text" name="limit_troops_to_farm" value="<%= @configs[:limit_trop_to_farm] %>"></td>
+      </tr>
+
+      <tr>
+        <td> Evolve cereal field?</td><td><img src="/images/cereal.png">&nbsp;&nbsp;<input size="20"  type="text" name="cereal" value="<%= @configs[:cereal_field] %>"></td>
+      </tr>
+
+      <tr>
+        <td> Evolve iron field?</td><td><img src="/images/iron.png">&nbsp;&nbsp;<input size="20"  type="text" name="iron" value="<%= @configs[:iron_field] %>"></td>
+      </tr>
+
+      <tr>
+        <td> Evolve wood field?</td><td><img src="/images/wood.png">&nbsp;&nbsp;<input size="20"  type="text" name="wood" value="<%= @configs[:wood_field] %>"></td>
+      </tr>
+
+      <tr>
+        <td>Evolve clay field?</td><td><img src="/images/clay.png">&nbsp;&nbsp;<input size="20"  type="text" name="clay" value="<%= @configs[:clay_field] %>"></td>
+      </tr>
+
+
+      <tr><td colspan="2"> <input style="width:100%;height:50px;" type="submit" value="Save Changes"></td></tr>
+    </table>
+  </form>
+
+
+</td>
+    </tr>
+  </table>
+
+
+</div>
+
+
+
+
+    <h3 class="mypets">--- Farm List ----</h3>
+    <div class="thepet">
+
+      <form method="post" action="/save_farmlist">
+<table border="0" width="950px"><tr><td width="50%">
+
+        <table class="imagetable" width="100%" border="0">
+          <tr><td>Farm 1:</td><td><input type="text" name="farm1" value="<%=@farmlist[:farm1]%>"></td></tr>
+          <tr><td>Farm 2:</td><td><input type="text" name="farm2" value="<%=@farmlist[:farm2]%>"></td></tr>
+          <tr><td>Farm 3:</td><td><input type="text" name="farm3" value="<%=@farmlist[:farm3]%>"></td></tr>
+          <tr><td>Farm 4:</td><td><input type="text" name="farm4" value="<%=@farmlist[:farm4]%>"></td></tr>
+          <tr><td>Farm 5:</td><td><input type="text" name="farm5" value="<%=@farmlist[:farm5]%>"></td></tr>
+          <tr><td>Farm 6:</td><td><input type="text" name="farm6" value="<%=@farmlist[:farm6]%>"></td></tr>
+          <tr><td>Farm 7:</td><td><input type="text" name="farm7" value="<%=@farmlist[:farm7]%>"></td></tr>
+          <tr><td>Farm 8:</td><td><input type="text" name="farm8" value="<%=@farmlist[:farm8]%>"></td></tr>
+          <tr><td>Farm 9:</td><td><input type="text" name="farm9" value="<%=@farmlist[:farm9]%>"></td></tr>
+          <tr><td>Farm 10:</td><td><input type="text" name="farm10" value="<%=@farmlist[:farm10]%>"></td></tr>
+          <tr><td>Farm 11:</td><td><input type="text" name="farm11" value="<%=@farmlist[:farm11]%>"></td></tr>
+          <tr><td>Farm 12:</td><td><input type="text" name="farm12" value="<%=@farmlist[:farm12]%>"></td></tr>
+          <tr><td>Farm 13:</td><td><input type="text" name="farm13" value="<%=@farmlist[:farm13]%>"></td></tr>
+          <tr><td>Farm 14:</td><td><input type="text" name="farm14" value="<%=@farmlist[:farm14]%>"></td></tr>
+          <tr><td>Farm 15:</td><td><input type="text" name="farm15" value="<%=@farmlist[:farm15]%>"></td></tr>
+        </table>
+
+
+</td>
+  <td width="50%">
+
+
+    <table class="imagetable" width="100%" border="0">
+      <tr><td>Farm 16:</td><td><input type="text" name="farm16" value="<%=@farmlist[:farm16]%>"></td></tr>
+      <tr><td>Farm 17:</td><td><input type="text" name="farm17" value="<%=@farmlist[:farm17]%>"></td></tr>
+      <tr><td>Farm 18:</td><td><input type="text" name="farm18" value="<%=@farmlist[:farm18]%>"></td></tr>
+      <tr><td>Farm 19:</td><td><input type="text" name="farm19" value="<%=@farmlist[:farm19]%>"></td></tr>
+      <tr><td>Farm 20:</td><td><input type="text" name="farm20" value="<%=@farmlist[:farm20]%>"></td></tr>
+      <tr><td>Farm 21:</td><td><input type="text" name="farm21" value="<%=@farmlist[:farm21]%>"></td></tr>
+      <tr><td>Farm 22:</td><td><input type="text" name="farm22" value="<%=@farmlist[:farm22]%>"></td></tr>
+      <tr><td>Farm 23:</td><td><input type="text" name="farm23" value="<%=@farmlist[:farm23]%>"></td></tr>
+      <tr><td>Farm 24:</td><td><input type="text" name="farm24" value="<%=@farmlist[:farm24]%>"></td></tr>
+      <tr><td>Farm 25:</td><td><input type="text" name="farm25" value="<%=@farmlist[:farm25]%>"></td></tr>
+      <tr><td>Farm 26:</td><td><input type="text" name="farm26" value="<%=@farmlist[:farm26]%>"></td></tr>
+      <tr><td>Farm 27:</td><td><input type="text" name="farm27" value="<%=@farmlist[:farm27]%>"></td></tr>
+      <tr><td>Farm 28:</td><td><input type="text" name="farm28" value="<%=@farmlist[:farm28]%>"></td></tr>
+      <tr><td>Farm 29:</td><td><input type="text" name="farm29" value="<%=@farmlist[:farm29]%>"></td></tr>
+      <tr><td>Farm 30:</td><td><input type="text" name="farm30" value="<%=@farmlist[:farm30]%>"></td></tr>
+    </table>
+
+  </td>
+
+  </tr>
+
+  <tr><td colspan="2"><center><input style="width:940px;height:50px" type="submit" value="Save farmlist"></center></td></tr>
+</table>
+
+        </form>
+
+
+
+
+    </div>
+
+
+
+
+
+<h3 class="mypets">--- B0t Log ----</h3>
+<div class="thepet">
+
+</div>
+
+
+
+  </td>
+
+  </tr>
+
+  <!---<tr><td align="right">
+   </td></tr>-->
+  <tr><td>
+
+
+<iframe frameborder="no" width="960px" height="380px" src="/views/log.erb"></iframe>
+
+
+
+  </td></tr>
+
+</table>
+
+<br><br>
+
+</body>
+</html>
+
+
+
+
+
